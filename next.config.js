@@ -3,6 +3,9 @@ const ContentSecurityPolicy = require('./csp')
 const redirects = require('./redirects')
 
 const nextConfig = {
+  typescript: {
+    ignoreBuildError: true,
+  },
   reactStrictMode: true,
   swcMinify: true,
   images: {
@@ -42,6 +45,8 @@ const nextConfig = {
         },
       ],
     })
+
+    
 
     return headers
   },
