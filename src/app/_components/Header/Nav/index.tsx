@@ -29,8 +29,9 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
       {navItems.map(({ link }, i) => {
         return <CMSLink key={i} {...link} appearance="none" />
       })}
-      <CartLink />
-      {user && <Link href="/account">Account</Link>}
+      {/* <CartLink /> */}
+      {user && <CartLink />}
+      {user && <Link href="/account">My Profile</Link>}
       {!user && (
         <><Button
           el="link"
@@ -45,7 +46,6 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
             appearance="primary"
             onClick={() => (window.location.href = '/create-account')} /></>
       )}
-      {user && <CartLink />}
     </nav>
   )
 }
